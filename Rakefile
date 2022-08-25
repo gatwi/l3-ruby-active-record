@@ -16,14 +16,16 @@ end
 
 # ORGANIZE TASKS IN NAMESPACES
 namespace :math_concepts do
-    desc 'Find addition'
-    task :add do
-        puts "Addition"
+    desc 'Method #1: Use the default rake way to add two numbers and log the result'
+    task :add, [:num1, :num] do |t, args|
+        puts args[:num1].to_i + args[:num].to_i
     end
+
     desc 'Find multiplication'
     task :mult do
         puts "Multiplication"
     end
+    
     desc 'Find division'
     task :div do
         puts "Division"
